@@ -24,10 +24,11 @@ function cargar_edades(max: number, min: number) {
     edades[i] = Math.floor(Math.random() * (max - min + 1) + min);
   }
   console.log(edades);
-  consultar_edades(edades);
+  return edades;
 }
 
 btnDatos1.addEventListener("click", () => {
   //let cantidad: number = cant.value;
-  cargar_edades(40, 19);
+  let edades = cargar_edades(40, 19);
+  consultar_edades(edades);
 });
